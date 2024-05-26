@@ -1,0 +1,13 @@
+{
+    "name": "@nwutils/cli",
+    "version": "0.0.0",
+    "description": "Command line interface for building NW.js apps",
+    "author": {
+        "name": "Ayushman Chhabra",
+        "url": "https://ayushmanchhabra.com"
+    },
+    "license": "MIT",
+    "files": [
+        "LICENSE"
+    ]
+}
