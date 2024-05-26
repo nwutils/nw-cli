@@ -6,7 +6,7 @@ import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
 import * as nw from 'nw';
 
-describe('basic app', async function () {
+describe('basic app', { timeout: Infinity }, async function () {
   /**
    * @type {chrome.Driver}
   */
@@ -38,4 +38,4 @@ describe('basic app', async function () {
     await driver.quit();
   });
 
-}, { timeout: Infinity });
+});
