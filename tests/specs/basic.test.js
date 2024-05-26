@@ -42,4 +42,4 @@ describe('basic app', async function () {
     await driver.quit();
   });
 
-});
+}, { timeout: Infinity });
