@@ -19,7 +19,7 @@
     "dependencies": {
         "base-volta-off-of-nwjs": "^1.0.5",
         "commander": "^12.1.0",
-        "nw": "^0.88.0",
+        "nw": "0.87.0-4",
         "nw-builder": "^4.7.4"
     },
     "volta": {
