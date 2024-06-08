@@ -1,32 +1,46 @@
 {
     "name": "@nwutils/cli",
     "version": "0.0.0",
-    "description": "Command line interface for building NW.js apps",
-    "type": "module",
+    "description": "Command line interface for building NW.js applications",
+    "keywords": [
+        "NW.js",
+        "node-webkit",
+        "Desktop",
+        "Application"
+    ],
     "author": {
         "name": "Ayushman Chhabra",
         "url": "https://ayushmanchhabra.com"
     },
     "license": "MIT",
+    "main": "./src/index.js",
+    "bin": "./src/cli.js",
+    "type": "module",
     "files": [
-        "LICENSE"
+        "LICENSE",
+        "src"
     ],
+    "homepage": "https://github.com/nwutils/nw-cli",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/nwutils/nw-cli.git"
+    },
     "scripts": {
         "postinstall": "base-volta-off-of-nwjs",
         "lint": "exit 0",
         "test": "vitest run"
     },
-    "dependencies": {
-        "base-volta-off-of-nwjs": "^1.0.5",
-        "commander": "^12.1.0",
-        "nw": "0.88.0",
-        "nw-builder": "^4.7.4"
-    },
-    "volta": {
-        "node": "21.1.0"
-    },
     "devDependencies": {
         "selenium-webdriver": "^4.21.0",
         "vitest": "^1.6.0"
+    },
+    "dependencies": {
+        "base-volta-off-of-nwjs": "^1.0.5",
+        "commander": "^12.1.0",
+        "nw": "0.88.0-2",
+        "nw-builder": "^4.7.4"
+    },
+    "volta": {
+        "node": "22.0.0"
     }
 }
