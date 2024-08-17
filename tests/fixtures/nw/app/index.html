@@ -7,6 +7,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('nw-app-argv').innerText = nw.App.argv;
+            document.getElementById('nw-app-fullargv').innerText = nw.App.fullArgv;
         });
     </script>
     <title>nw.App fixture</title>
@@ -16,6 +17,11 @@
     <div>
         <span>nw.App.argv: </span>
         <span id="nw-app-argv"></span>
+    </div>
+
+    <div>
+        <span>nw.App.fullArgv: </span>
+        <span id="nw-app-fullargv"></span>
     </div>
 </body>
 

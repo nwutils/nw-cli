@@ -20,7 +20,7 @@ describe('nw.App', { timeout: Infinity }, async function () {
   beforeAll(async () => {
     const options = new chrome.Options();
     const args = [
-      `--nwapp=${path.resolve('tests', 'fixtures', 'app')}`,
+      `--nwapp=${path.resolve('tests', 'fixtures', 'nw', 'app')}`,
       '--headless=new',
     ];
     options.addArguments(args);
@@ -49,6 +49,31 @@ describe('nw.App', { timeout: Infinity }, async function () {
     expect(argv).toContain('--enable-automation');
     expect(argv).toContain('--enable-logging');
     expect(argv).toContain('--headless=new');
+    expect(argv).toContain('--user-data-dir=');
+  });
+
+  it('renders nw.App.fullArgv', async () => {
+    /**
+     * `nw.App.argv` looks similar to the following:
+     * 
+     * `"--allow-pre-commit-input,--disable-popup-blocking,--enable-automation,--enable-logging,--headless=new,--nwapp=/home/ayushmanchhabra/Git/nwutils/cli/tests/fixtures/nw/app,--remote-debugging-port=0,--user-data-dir=/tmp/.io.nwjs.Jb5Vnk"`
+     * 
+     * @type {string}
+     */
+    const argv = await driver.findElement(selenium.By.id('nw-app-fullargv')).getText();
+    
+    /* There should be 8 command line arguments. */
+    const argvLength = argv.split(',').length;
+    expect(argvLength).toBe(8);
+    
+    /* Since order does not matter, the `.toContain` matcher is used.*/
+    expect(argv).toContain('--allow-pre-commit-input');
+    expect(argv).toContain('--disable-popup-blocking');
+    expect(argv).toContain('--enable-automation');
+    expect(argv).toContain('--enable-logging');
+    expect(argv).toContain('--headless=new');
+    expect(argv).toContain('--nwapp=');
+    expect(argv).toContain('--remote-debugging-port=');
     expect(argv).toContain('--user-data-dir=');
   });
 
