@@ -9,6 +9,7 @@
             document.getElementById('nw-app-argv').innerText = nw.App.argv;
             document.getElementById('nw-app-fullargv').innerText = nw.App.fullArgv;
             document.getElementById('nw-app-filteredargv').innerText = nw.App.filteredArgv;
+            document.getElementById('nw-app-startpath').innerText = nw.App.startPath;
         });
     </script>
     <title>nw.App fixture</title>
@@ -28,6 +29,11 @@
     <div>
         <span>nw.App.filteredArgv: </span>
         <span id="nw-app-filteredargv"></span>
+    </div>
+    <br>
+    <div>
+        <span>nw.App.filteredArgv: </span>
+        <span id="nw-app-startpath"></span>
     </div>
 </body>
 

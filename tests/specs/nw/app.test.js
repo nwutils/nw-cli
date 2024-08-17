@@ -1,4 +1,5 @@
 import path from 'node:path';
+import process from 'node:process';
 
 import selenium from 'selenium-webdriver';
 import chrome from 'selenium-webdriver/chrome.js';
@@ -96,6 +97,16 @@ describe('nw.App', { timeout: Infinity }, async function () {
     expect(argv).toContain('--remote-debugging-port=');
     expect(argv).toContain('--renderer-cmd-prefix=');
     expect(argv).toContain('--nwapp=');
+  });
+
+  it('renders nw.App.startPath', async () => {
+    /**
+     * @type {string}
+     */
+    const startPath = await driver.findElement(selenium.By.id('nw-app-startpath')).getText();
+
+    /* The directory where the app starts. In this case it is, the root of this project.  */
+    expect(startPath).toBe(process.cwd());
   });
 
   afterAll(async function () {
