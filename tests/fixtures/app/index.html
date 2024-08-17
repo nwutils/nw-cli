@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('nw-app-argv').innerText = nw.App.argv;
+        });
+    </script>
+    <title>nw.App fixture</title>
+</head>
+
+<body>
+    <div>
+        <span>nw.App.argv: </span>
+        <span id="nw-app-argv"></span>
+    </div>
+</body>
+
+</html>
