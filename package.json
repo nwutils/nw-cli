@@ -28,7 +28,8 @@
     "scripts": {
         "postinstall": "base-volta-off-of-nwjs",
         "lint": "exit 0",
-        "test": "vitest run"
+        "test": "vitest run",
+        "dev": "nw ./tests/fixtures/custom"
     },
     "devDependencies": {
         "@types/chrome": "^0.0.270",
@@ -41,7 +42,7 @@
     "dependencies": {
         "base-volta-off-of-nwjs": "^1.0.5",
         "commander": "^12.1.0",
-        "nw": "0.90.0",
+        "nw": "^0.90.0-1",
         "nw-builder": "^4.9.0"
     },
     "volta": {
