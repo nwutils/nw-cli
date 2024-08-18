@@ -11,6 +11,7 @@
             document.getElementById('nw-app-filteredargv').innerText = nw.App.filteredArgv;
             document.getElementById('nw-app-startpath').innerText = nw.App.startPath;
             document.getElementById('nw-app-datapath').innerText = nw.App.dataPath;
+            document.getElementById('nw-app-manifest').innerText = JSON.stringify(nw.App.manifest);
         });
     </script>
     <title>nw.App fixture</title>
@@ -40,6 +41,11 @@
     <div>
         <span>nw.App.dataPath: </span>
         <span id="nw-app-datapath"></span>
+    </div>
+    <br>
+    <div>
+        <span>nw.App.manifest: </span>
+        <span id="nw-app-manifest"></span>
     </div>
 </body>
 

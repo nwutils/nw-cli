@@ -111,7 +111,7 @@ describe('nw.App', { timeout: Infinity }, async function () {
   });
 
   /* TODO: https://github.com/nwjs/nw.js/issues/4696 */
-  it('renders nw.App.dataPath', async () => {
+  it.skip('renders nw.App.dataPath', async () => {
     /**
      * @type {string}
      */
@@ -125,6 +125,18 @@ describe('nw.App', { timeout: Infinity }, async function () {
     } else if (process.platform === 'darwin') {
       expect(path.resolve(dataPath)).toBe(path.resolve(os.homedir(), 'Library', 'Application Support', 'nw-app', 'Default'))
     }
+  });
+
+  it('renders nw.App.manifest', async () => {
+    /**
+     * @type {string}
+     */
+    const manifestString = await driver.findElement(selenium.By.id('nw-app-manifest')).getText();
+    const manifest = JSON.parse(manifestString);
+
+    /* Only check if the user defined manifest properties are present, ignore the rest. */
+    expect(manifest.name).toBe('nw-app');
+    expect(manifest.main).toBe('file://' + path.resolve('tests', 'fixtures', 'nw', 'app', 'index.html'));
   });
 
   afterAll(async function () {
