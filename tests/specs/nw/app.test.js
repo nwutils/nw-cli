@@ -1,5 +1,6 @@
 import path from 'node:path';
 import process from 'node:process';
+import os from 'node:os';
 
 import selenium from 'selenium-webdriver';
 import chrome from 'selenium-webdriver/chrome.js';
@@ -115,12 +116,13 @@ describe('nw.App', { timeout: Infinity }, async function () {
      */
     const dataPath = await driver.findElement(selenium.By.id('nw-app-datapath')).getText();
 
+    /* `~` is Bash specific. In Node, the equivalent is `os.homedir()` */
     if (process.platform === 'win32') {
       expect(path.resolve(dataPath)).toBe(path.resolve(process.env.LOCALAPPDATA, 'nw-app'))
     } else if (process.platform === 'linux') {
-      expect(path.resolve(dataPath)).toBe(path.resolve('~', '.config', 'nw-app'))
+      expect(path.resolve(dataPath)).toBe(path.resolve(os.homedir(), '.config', 'nw-app'))
     } else if (process.platform === 'darwin') {
-      expect(path.resolve(dataPath)).toBe(path.resolve('~', 'Library', 'Application Support', 'nw-app', 'Default'))
+      expect(path.resolve(dataPath)).toBe(path.resolve(os.homedir(), 'Library', 'Application Support', 'nw-app', 'Default'))
     }
 
     /* The directory where the app starts. In this case it is, the root of this project.  */
