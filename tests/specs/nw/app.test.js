@@ -101,7 +101,6 @@ describe('nw.App', { timeout: Infinity }, async function () {
   });
 
   it('renders nw.App.startPath', async () => {
-    await driver.wait(true, 5000);
     /**
      * @type {string}
      */
