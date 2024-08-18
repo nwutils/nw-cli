@@ -109,6 +109,24 @@ describe('nw.App', { timeout: Infinity }, async function () {
     expect(startPath).toBe(process.cwd());
   });
 
+  it('renders nw.App.dataPath', async () => {
+    /**
+     * @type {string}
+     */
+    const dataPath = await driver.findElement(selenium.By.id('nw-app-datapath')).getText();
+
+    if (process.platform === 'win32') {
+      expect(path.resolve(dataPath)).toBe(path.resolve(process.env.LOCALAPPDATA, 'nw-app'))
+    } else if (process.platform === 'linux') {
+      expect(path.resolve(dataPath)).toBe(path.resolve('~', '.config', 'nw-app'))
+    } else if (process.platform === 'darwin') {
+      expect(path.resolve(dataPath)).toBe(path.resolve('~', 'Library', 'Application Support', 'nw-app', 'Default'))
+    }
+
+    /* The directory where the app starts. In this case it is, the root of this project.  */
+    expect(startPath).toBe(process.cwd());
+  });
+
   afterAll(async function () {
     await driver.quit();
   });
