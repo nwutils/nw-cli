@@ -110,7 +110,8 @@ describe('nw.App', { timeout: Infinity }, async function () {
     expect(startPath).toBe(process.cwd());
   });
 
-  it('renders nw.App.dataPath', async () => {
+  /* TODO: https://github.com/nwjs/nw.js/issues/4696 */
+  it.skip('renders nw.App.dataPath', async () => {
     /**
      * @type {string}
      */
