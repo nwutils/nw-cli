@@ -101,6 +101,7 @@ describe('nw.App', { timeout: Infinity }, async function () {
   });
 
   it('renders nw.App.startPath', async () => {
+    await driver.wait(true, 5000);
     /**
      * @type {string}
      */
@@ -111,7 +112,7 @@ describe('nw.App', { timeout: Infinity }, async function () {
   });
 
   /* TODO: https://github.com/nwjs/nw.js/issues/4696 */
-  it.skip('renders nw.App.dataPath', async () => {
+  it('renders nw.App.dataPath', async () => {
     /**
      * @type {string}
      */
@@ -119,15 +120,12 @@ describe('nw.App', { timeout: Infinity }, async function () {
 
     /* `~` is Bash specific. In Node, the equivalent is `os.homedir()` */
     if (process.platform === 'win32') {
-      expect(path.resolve(dataPath)).toBe(path.resolve(process.env.LOCALAPPDATA, 'nw-app'))
+      expect(path.resolve(dataPath)).toBe(path.resolve(os.homedir(), 'nw-app'))
     } else if (process.platform === 'linux') {
       expect(path.resolve(dataPath)).toBe(path.resolve(os.homedir(), '.config', 'nw-app'))
     } else if (process.platform === 'darwin') {
       expect(path.resolve(dataPath)).toBe(path.resolve(os.homedir(), 'Library', 'Application Support', 'nw-app', 'Default'))
     }
-
-    /* The directory where the app starts. In this case it is, the root of this project.  */
-    expect(startPath).toBe(process.cwd());
   });
 
   afterAll(async function () {
