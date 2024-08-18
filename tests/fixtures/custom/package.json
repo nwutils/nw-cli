@@ -1,0 +1,6 @@
+{
+    "name": "custom-app",
+    "main": "index.js",
+    "description": "Placeholder app to test various things in NW.js",
+    "type": "module"
+}
