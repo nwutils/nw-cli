@@ -139,6 +139,25 @@ describe('nw.App', { timeout: Infinity }, async function () {
     expect(manifest.main).toBe('file://' + path.resolve('tests', 'fixtures', 'nw', 'app', 'index.html'));
   });
 
+  it.todo('App.clearCache()', async () => {});
+  it.todo('App.clearAppCache(manifest_url)', async () => {});
+  it.todo('App.closeAllWindows()', async () => {});
+  it.todo('App.crashBrowser()', async () => {});
+  it.todo('App.crashRenderer()', async () => {});
+  it.todo('App.enableComponent(component, callback)', async () => {});
+  it.todo('App.getProxyForURL(url)', async () => {});
+  it.todo('setProxyConfig(config, pac_url)', async () => {});
+  it.todo('App.quit()', async () => {});
+  it.todo('App.setCrashDumpDir(dir)', async () => {});
+  it.todo('App.addOriginAccessWhitelistEntry(sourceOrigin, destinationProtocol, destinationHost, allowDestinationSubdomains)', async () => {});
+  it.todo('removeOriginAccessWhitelistEntry(sourceOrigin, destinationProtocol, destinationHost, allowDestinationSubdomains)', async () => {});
+  it.todo('App.registerGlobalHotKey(shortcut)', async () => {});
+  it.todo('App.unregisterGlobalHotKey(shortcut)', async () => {});
+  it.todo('App.updateComponent(component, callback)', async () => {});
+  it.todo('Event: open(args)', async () => {});
+  it.todo('Event: reopen', async () => {});
+
+
   afterAll(async function () {
     await driver.quit();
   });
