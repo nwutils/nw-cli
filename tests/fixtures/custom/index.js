@@ -1,11 +1,11 @@
-// Issue #8205
+nw.Window.isDevToolsOpen = isDevToolsOpen;
 
-async function OpenWindow() {
-    nw.Window.open('https://hivetoon.com');
-    
-    await new Promise((resolve) => { setTimeout(resolve, 5000);});
-    
-    nw.App.closeAllWindows();
-    nw.App.quit();
+function isDevToolsOpen(callback) {
+    chrome.windows.getAll({
+        populate: true,
+        windowTypes: ['devtools']
+    },
+    function (wins) {
+        callback(wins.length > 0);
+    })
 }
-OpenWindow();
