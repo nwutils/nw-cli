@@ -15,5 +15,12 @@ Apply NW.js specific polyfills to your NW.js application.
 import { applyNwjsPolyfills } from '@nwutils/cli';
 
 // Run this as early in your application lifecycle as possible.
-patches();
+applyNwjsPolyfills();
 ```
+
+## Roadmap
+
+* [ ] Add tests for nw.Window.isDevToolsOpen
+* [ ] Setup Vitest Code Coverage Action
+* [ ] Setup License Check Action
+* [ ] Setup eslint
