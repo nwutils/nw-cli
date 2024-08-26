@@ -1,5 +1,5 @@
 /**
- * Query the status of devtools window..
+ * Query the status of DevTools window.
  * 
  * @function
  * @param {(status: boolean) => void} callback - Callback function
