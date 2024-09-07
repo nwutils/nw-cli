@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.2](https://github.com/nwutils/nw-cli/compare/v0.0.1...v0.0.2) (2024-09-07)
+
+
+### Chores
+
+* **deps-dev:** bump the npm group across 1 directory with 2 updates ([#34](https://github.com/nwutils/nw-cli/issues/34)) ([fabc149](https://github.com/nwutils/nw-cli/commit/fabc1490bb24daf07d8151e50202ace2da41e93d))
+
 ## [0.0.1](https://github.com/nwutils/nw-cli/compare/v0.0.0...v0.0.1) (2024-08-26)
 
 
