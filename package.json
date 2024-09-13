@@ -37,7 +37,7 @@
         "@types/nw.js": "^0.91.0",
         "@types/selenium-webdriver": "^4.1.26",
         "selenium-webdriver": "^4.24.0",
-        "vitest": "^2.0.5"
+        "vitest": "^2.1.0"
     },
     "dependencies": {
         "base-volta-off-of-nwjs": "^1.0.5",
