@@ -25,12 +25,15 @@ function isDevToolsOpen(callback) {
  * 
  * The environment is checked before adding the relevant function.
  * 
- * @returns {void}
+ * @returns {string} - A message indicating whether the polyfill was applied or not.
 */
 export default function polyfill() {
     if (process.versions['nw-flavor'] === 'sdk' && typeof nw.Window.isDevToolsOpen !== 'function' && process.versions['nw'] <= '0.92.0') {
         nw.Window.prototype.isDevToolsOpen = isDevToolsOpen;
         global.nw.Window.prototype.isDevToolsOpen = isDevToolsOpen;
         window.nw.Window.prototype.isDevToolsOpen = isDevToolsOpen;
+        return 'Polyfill applied';
+    } else {
+        return 'Polyfill not applied';
     }
 }
