@@ -23,7 +23,9 @@ function isDevToolsOpen(callback) {
 /**
  * Polyfill function for missing NW.js functionality.
  * 
- * The environment is checked before adding the relevant functions.
+ * The environment is checked before adding the relevant function.
+ * 
+ * @returns {void}
 */
 export default function polyfill() {
     if (process.versions['nw-flavor'] === 'sdk' && typeof nw.Window.isDevToolsOpen !== 'function' && process.versions['nw'] <= '0.92.0') {
