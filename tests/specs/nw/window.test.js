@@ -32,10 +32,9 @@ describe('nw.WIndow', { timeout: Infinity }, async function () {
   });
 
   it('nw.Window.isDevToolsOpen returns true if DevTools is open', async () => {
-    await driver.wait(selenium.until.elementTextMatches(selenium.By.id('nw-window-isdevtoolsopen'), 'true'), 5000);
-    /**
-     * @type {string}
-     */
+    const isDevToolsOpenElement = await driver.wait(selenium.until.elementTextMatches(selenium.By.id('nw-window-isdevtoolsopen'), 'true'), 5000);
+    const isDevToolsOpen = await isDevToolsOpenElement.getText();
+    expect(isDevToolsOpen).toBe('true');
     // const isDevToolsOpen = await driver.findElement(selenium.By.id('nw-window-isdevtoolsopen')).getText();
     // expect(isDevToolsOpen).toBe('true');
   });
