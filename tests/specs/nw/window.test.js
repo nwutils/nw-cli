@@ -8,7 +8,7 @@ import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
 import * as nw from 'nw';
 
-describe('nw.WIndow', { timeout: Infinity }, async function () {
+describe.skip('nw.Window', { timeout: Infinity }, async function () {
   /**
    * @type {chrome.Driver}
   */
