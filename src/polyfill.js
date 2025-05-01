@@ -15,20 +15,25 @@ function isDevToolsOpen(callback) {
         populate: true,
         windowTypes: ['devtools']
     },
-    function (wins) {
-        callback(wins.length > 0);
-    })
+        function (wins) {
+            callback(wins.length > 0);
+        })
 }
 
 /**
  * Polyfill function for missing NW.js functionality.
  * 
- * The environment is checked before adding the relevant functions.
+ * The environment is checked before adding the relevant function.
+ * 
+ * @returns {string} - A message indicating whether the polyfill was applied or not.
 */
-export default function polyfill () {
-    if (process.versions['nw-flavor'] === 'sdk' && typeof nw.Window.isDevToolsOpen !== 'function') {
-        nw.Window.isDevToolsOpen = isDevToolsOpen;
-        global.nw.Window.isDevToolsOpen = isDevToolsOpen;
-        window.nw.Window.isDevToolsOpen = isDevToolsOpen;
+export default function polyfill() {
+    if (process.versions['nw-flavor'] === 'sdk' && typeof nw.Window.isDevToolsOpen !== 'function' && process.versions['nw'] <= '0.92.0') {
+        nw.Window.prototype.isDevToolsOpen = isDevToolsOpen;
+        global.nw.Window.prototype.isDevToolsOpen = isDevToolsOpen;
+        window.nw.Window.prototype.isDevToolsOpen = isDevToolsOpen;
+        return 'Polyfill applied';
+    } else {
+        return 'Polyfill not applied';
     }
 }

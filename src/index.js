@@ -1,5 +1,3 @@
-import applyNwjsPolyfills from './polyfill';
+import polyfill from './polyfill';
 
-export {
-    applyNwjsPolyfills
-}
+export { polyfill };

@@ -12,10 +12,10 @@ Command line interface for building NW.js apps
 Apply NW.js specific polyfills to your NW.js application.
 
 ```js
-import { applyNwjsPolyfills } from '@nwutils/cli';
+import { pollyfill } from '@nwutils/cli';
 
 // Run this as early in your application lifecycle as possible.
-applyNwjsPolyfills();
+pollyfill();
 ```
 
 ## Roadmap
