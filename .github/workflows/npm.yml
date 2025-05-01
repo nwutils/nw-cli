@@ -15,7 +15,7 @@ jobs:
             echo "NPM_TOKEN is not set, skipping job."
             exit 1
           fi
-      - uses: actions/checkout@v4.1.7
+      - uses: actions/checkout@v4.2.2
       - name: Setup Volta
         uses: volta-cli/action@v4.2.1
       - run: npm ci
