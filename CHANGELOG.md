@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.0.2](https://github.com/nwutils/nw-cli/compare/v0.0.1...v0.0.2) (2025-05-01)
+
+
+### Bug Fixes
+
+* **deps:** security fix for cross-spawn and @babel/runtime ([eb32892](https://github.com/nwutils/nw-cli/commit/eb328926e0454c3c5ba726318ddfa153a2daa8fd))
+* **polyfill:** attach isDevToolsOpen function via prototype ([#32](https://github.com/nwutils/nw-cli/issues/32)) ([0130ca3](https://github.com/nwutils/nw-cli/commit/0130ca31af42e878f0d78d8949c407bafe161d1a))
+
+
+### Chores
+
+* **ci:** add explicit permissions for GitHub Action jobs ([7ca7205](https://github.com/nwutils/nw-cli/commit/7ca72058a52ad76c74b1446e3dd59f388e324fe7))
+* **deps-dev:** bump the npm group across 1 directory with 2 updates ([#34](https://github.com/nwutils/nw-cli/issues/34)) ([fabc149](https://github.com/nwutils/nw-cli/commit/fabc1490bb24daf07d8151e50202ace2da41e93d))
+* **deps:** bump the gha group across 1 directory with 2 updates ([#109](https://github.com/nwutils/nw-cli/issues/109)) ([82916c7](https://github.com/nwutils/nw-cli/commit/82916c7622f43a42b0fdd0e6533b70201ae752f7))
+* **deps:** bump the gha group across 1 directory with 2 updates ([#61](https://github.com/nwutils/nw-cli/issues/61)) ([47b7c33](https://github.com/nwutils/nw-cli/commit/47b7c3387c23a726ba8a70b9298d8d78d3adb43d))
+* **deps:** bump the npm group across 1 directory with 8 updates ([#106](https://github.com/nwutils/nw-cli/issues/106)) ([060ea4c](https://github.com/nwutils/nw-cli/commit/060ea4cc3efef36afeb964a1dd59eb7b45bb177e))
+* **deps:** bump the npm group across 1 directory with 8 updates ([#74](https://github.com/nwutils/nw-cli/issues/74)) ([c3349a0](https://github.com/nwutils/nw-cli/commit/c3349a084462c8c83c0daa1609daf95fa589337e))
+
 ## [0.0.1](https://github.com/nwutils/nw-cli/compare/v0.0.0...v0.0.1) (2024-08-26)
 
 
