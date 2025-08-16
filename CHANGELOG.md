@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3](https://github.com/nwutils/nw-cli/compare/v0.0.2...v0.0.3) (2025-08-16)
+
+
+### Chores
+
+* **deps:** bump the npm group with 7 updates ([#110](https://github.com/nwutils/nw-cli/issues/110)) ([22a8067](https://github.com/nwutils/nw-cli/commit/22a8067ff12c59b1d05537d48dd842b2137f9dfb))
+
 ## [0.0.2](https://github.com/nwutils/nw-cli/compare/v0.0.1...v0.0.2) (2025-05-01)
 
 
