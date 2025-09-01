@@ -42,8 +42,8 @@
     "dependencies": {
         "base-volta-off-of-nwjs": "^1.0.5",
         "commander": "^14.0.0",
-        "nw": "^0.102.1",
-        "nw-builder": "^4.14.2"
+        "nw": "^0.103.0",
+        "nw-builder": "^4.15.0"
     },
     "volta": {
         "node": "23.10.0"
