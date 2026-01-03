@@ -3,7 +3,7 @@ name: e2e
 on:
   pull_request:
     branches:
-    - main
+      - main
 
 permissions:
   contents: read
@@ -14,19 +14,19 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  e2e:
+  tests:
     strategy:
       matrix:
-        os: 
-        - macos-15
-        - ubuntu-24.04
-        - windows-2025
+        os:
+          - macos-15
+          - ubuntu-24.04
+          - windows-2025
       fail-fast: false
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4.2.2
-      - name: Use Node version defined in manifest
+        uses: actions/checkout@v6.0.1
+      - name: Setup Volta
         uses: volta-cli/action@v4.2.1
       - name: Node.js version
         run: node -v
