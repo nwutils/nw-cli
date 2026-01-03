@@ -41,9 +41,9 @@ describe('nw.App', { timeout: Infinity }, async function () {
      */
     const argv = await driver.findElement(selenium.By.id('nw-app-argv')).getText();
     
-    /* There should be 6 command line arguments. */
+    /* There should be 8 command line arguments. */
     const argvLength = argv.split(',').length;
-    expect(argvLength).toBe(6);
+    expect(argvLength).toBe(8);
     
     /* Since order does not matter, the `.toContain` matcher is used.*/
     expect(argv).toContain('--allow-pre-commit-input');
@@ -64,9 +64,9 @@ describe('nw.App', { timeout: Infinity }, async function () {
      */
     const argv = await driver.findElement(selenium.By.id('nw-app-fullargv')).getText();
     
-    /* There should be 8 command line arguments. */
+    /* There should be 10 command line arguments. */
     const argvLength = argv.split(',').length;
-    expect(argvLength).toBe(8);
+    expect(argvLength).toBe(10);
     
     /* Since order does not matter, the `.toContain` matcher is used.*/
     expect(argv).toContain('--allow-pre-commit-input');
