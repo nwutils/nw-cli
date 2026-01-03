@@ -43,9 +43,9 @@
         "base-volta-off-of-nwjs": "^1.0.5",
         "commander": "^14.0.2",
         "nw": "^0.106.1",
-        "nw-builder": "^4.16.2"
+        "nw-builder": "^4.17.0"
     },
     "volta": {
-        "node": "23.10.0"
+        "node": "25.2.1"
     }
 }
