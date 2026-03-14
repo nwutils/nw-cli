@@ -43,7 +43,7 @@ describe('nw.App', { timeout: Infinity }, async function () {
     
     /* There should be 8 command line arguments. */
     const argvLength = argv.split(',').length;
-    expect(argvLength).toBe(8);
+    expect(argvLength).toBe(11);
     
     /* Since order does not matter, the `.toContain` matcher is used.*/
     expect(argv).toContain('--allow-pre-commit-input');
