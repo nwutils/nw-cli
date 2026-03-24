@@ -6,8 +6,9 @@ Command line interface for building NW.js apps
 
 1. Install [Volta](https://volta.sh/)
 1. Install package: `npm i -D @nwutils/cli`
+1. Add `"scripts": { "start": "nw create MyApp" }`
 
-## Usage
+## API
 
 Apply NW.js specific polyfills to your NW.js application.
 
