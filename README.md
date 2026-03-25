@@ -37,7 +37,4 @@ pollyfill();
 
 ## Roadmap
 
-* [ ] Add tests for nw.Window.isDevToolsOpen
-* [ ] Setup Vitest Code Coverage Action
-* [ ] Setup License Check Action
-* [ ] Setup eslint
+* [ ] Package custom node test coverage action.
