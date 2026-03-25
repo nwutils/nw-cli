@@ -35,6 +35,7 @@ import { pollyfill } from '@nwutils/cli';
 pollyfill();
 ```
 
-## Roadmap
+## TODO before merging current PR
 
+* [ ] Add react-js template
 * [ ] Package custom node test coverage action.
