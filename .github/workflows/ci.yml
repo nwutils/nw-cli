@@ -26,15 +26,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6.0.2
-      - name: Setup Volta
-        uses: volta-cli/action@v4.2.1
-      - name: Node.js version
-        run: node -v
-      - name: npm version
-        run: npm -v
+      - name: Setup Node.js
+        uses: actions/setup-node@v3.0.1
+        with:
+          node-version: "25.6.1"
       - name: Install dependencies
         run: npm ci
       - name: Check for linting errors
         run: npm run lint
+      - name: Check for type errors
+        run: npm run type
       - name: Run tests
         run: npm run test

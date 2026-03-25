@@ -41,6 +41,7 @@
         "url": "git://github.com/nwutils/nw-cli.git"
     },
     "scripts": {
+        "lint": "eslint ./src ./tests",
         "type": "tsc",
         "test": "node --test --experimental-test-coverage --test-coverage-exclude=\"tests/**/*\" \"tests/specs/*.test.js\""
     },
@@ -50,9 +51,12 @@
         "commander": "^14.0.3"
     },
     "devDependencies": {
+        "@eslint/js": "^10.0.1",
         "@types/chrome": "^0.1.38",
         "@types/node": "^25.5.0",
         "@types/nw.js": "^0.92.0",
+        "eslint": "^10.1.0",
+        "globals": "^17.4.0",
         "typescript": "^6.0.2"
     },
     "packageManager": "npm@11.12.0"
