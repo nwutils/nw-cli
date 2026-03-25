@@ -12,9 +12,24 @@
         "name": "Ayushman Chhabra",
         "url": "https://ayushmanchhabra.com"
     },
+    "maintainers": [
+        {
+            "name": "Ayushman Chhabra",
+            "url": "https://ayushmanchhabra.com"
+        }
+    ],
+    "contributors": [
+        {
+            "name": "@nwutils/nw-cli Contributors",
+            "url": "https://github.com/nwutils/nw-cli/graphs/contributors"
+        }
+    ],
     "license": "MIT",
     "main": "./src/index.js",
-    "bin": "./src/cli.js",
+    "bin": {
+        "nw": "./bin/cli.js"
+    },
+    "types": "types",
     "type": "module",
     "files": [
         "LICENSE",
@@ -26,27 +41,23 @@
         "url": "git://github.com/nwutils/nw-cli.git"
     },
     "scripts": {
-        "postinstall": "base-volta-off-of-nwjs",
-        "lint": "exit 0",
-        "test": "vitest run",
-        "dev": "nw ./tests/fixtures/custom"
-    },
-    "devDependencies": {
-        "@types/chrome": "^0.1.37",
-        "@types/node": "^25.5.0",
-        "@types/nw.js": "^0.92.0",
-        "@types/selenium-webdriver": "^4.35.5",
-        "selenium-webdriver": "^4.41.0",
-        "vitest": "^4.1.0"
+        "lint": "eslint ./src ./tests",
+        "type": "tsc",
+        "test": "node --test --experimental-test-coverage --test-coverage-exclude=\"tests/**/*\" \"tests/specs/*.test.js\""
     },
     "dependencies": {
-        "base-volta-off-of-nwjs": "^1.0.5",
-        "commander": "^14.0.3",
-        "nw": "^0.109.0",
-        "nw-builder": "^4.17.5"
+        "@nwutils/getter": "^0.2.2",
+        "@nwutils/runner": "^0.2.1",
+        "commander": "^14.0.3"
     },
-    "volta": {
-        "node": "25.2.1",
-        "npm": "11.11.1"
-    }
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@types/chrome": "^0.1.38",
+        "@types/node": "^25.5.0",
+        "@types/nw.js": "^0.92.0",
+        "eslint": "^10.1.0",
+        "globals": "^17.4.0",
+        "typescript": "^6.0.2"
+    },
+    "packageManager": "npm@11.12.0"
 }

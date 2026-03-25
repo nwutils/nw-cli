@@ -4,10 +4,27 @@ Command line interface for building NW.js apps
 
 ## Getting Started
 
-1. Install [Volta](https://volta.sh/)
-1. Install package: `npm i -D @nwutils/cli`
+1. Install package: `npm i -g @nwutils/cli`
 
-## Usage
+## CLI
+
+### create
+
+Create a Vanilla JavaScript project.
+
+```shell
+nw create MyApp
+```
+
+Choose your template (defaults to `vanilla-js`) and out directory (defaults to `.`).
+
+```shell
+nw create --template=react-js --outDir=/path/to/project/dir MyApp
+```
+
+> Note: If you find a template is missing, feel free to open an issue or pull request.
+
+## API
 
 Apply NW.js specific polyfills to your NW.js application.
 
@@ -20,7 +37,6 @@ pollyfill();
 
 ## Roadmap
 
-* [ ] Add tests for nw.Window.isDevToolsOpen
-* [ ] Setup Vitest Code Coverage Action
-* [ ] Setup License Check Action
-* [ ] Setup eslint
+* [ ] Add react-js template
+* [ ] Package custom node test coverage action.
+* [ ] Properly deal with the types problem. This will be a major pain point for developers using TypeScript.
