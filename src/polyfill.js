@@ -1,3 +1,5 @@
+/// <reference types="nw.js" />
+
 /**
  * Query the status of DevTools window.
  * 

@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "rootDir": "src",
+        "outDir": "types",
+        "strict": true,
+        "target": "esnext",
+        "lib": [
+            "ESNext"
+        ],
+        "module": "NodeNext",
+        "moduleResolution": "nodenext",
+        "types": [
+            "node",
+            "nw.js"
+        ],
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "include": [
+        "src/**/*.js"
+    ],
+}
