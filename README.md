@@ -39,3 +39,7 @@ pollyfill();
 
 * [ ] Add react-js template
 * [ ] Package custom node test coverage action.
+
+## Roadmap
+
+* [ ] Properly deal with the types problem. This will be a major pain point for developers using TypeScript.
