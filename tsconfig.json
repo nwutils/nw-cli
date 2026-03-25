@@ -9,13 +9,15 @@
         "strict": true,
         "target": "esnext",
         "lib": [
-            "ESNext"
+            "ESNext",
+            "DOM"
         ],
         "module": "NodeNext",
         "moduleResolution": "nodenext",
         "types": [
             "node",
-            "nw.js"
+            "nw.js",
+            "chrome"
         ],
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true
