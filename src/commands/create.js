@@ -33,11 +33,6 @@ export function create(name, template, outDir) {
     const baseOutDir = path.resolve(outDir);
     const outDirPath = path.resolve(baseOutDir, name);
 
-    // Prevent path traversal
-    if (!outDirPath.startsWith(baseOutDir)) {
-        throw new Error("Invalid path: potential path traversal detected.");
-    }
-
     // Prevent overwrite
     if (fs.existsSync(outDirPath)) {
         throw new Error(`Directory "${outDirPath}" already exists.`);
@@ -74,11 +69,16 @@ export function create(name, template, outDir) {
     if (fs.existsSync(indexHtmlPath)) {
         const indexHtml = fs.readFileSync(indexHtmlPath, "utf-8");
 
-        if (!indexHtml.includes("{{APP_NAME}}")) {
+        const hasMustache = indexHtml.includes("{{APP_NAME}}");
+        const hasBare = indexHtml.includes("APP_NAME");
+
+        if (!hasMustache && !hasBare) {
             console.warn("Warning: APP_NAME placeholder not found in index.html");
         }
 
-        const updated = indexHtml.replace(/{{APP_NAME}}/g, name);
+        const updated = indexHtml
+            .replace(/{{APP_NAME}}/g, name)
+            .replace(/\bAPP_NAME\b/g, name);
 
         fs.writeFileSync(indexHtmlPath, updated, "utf-8");
     }
