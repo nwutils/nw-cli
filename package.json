@@ -26,7 +26,9 @@
     ],
     "license": "MIT",
     "main": "./src/index.js",
-    "bin": "./src/cli.js",
+    "bin": {
+        "nw": "./bin/cli.js"
+    },
     "types": "types",
     "type": "module",
     "files": [
@@ -46,10 +48,6 @@
         "@nwutils/getter": "^0.2.2",
         "@nwutils/runner": "^0.2.1",
         "commander": "^14.0.3"
-    },
-    "volta": {
-        "node": "25.6.1",
-        "npm": "11.12.0"
     },
     "devDependencies": {
         "@types/chrome": "^0.1.38",
