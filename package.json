@@ -46,8 +46,8 @@
         "test": "node --test --experimental-test-coverage --test-coverage-exclude=\"tests/**/*\" \"tests/specs/*.test.js\""
     },
     "dependencies": {
-        "@nwutils/getter": "^0.2.2",
-        "@nwutils/runner": "^0.2.1",
+        "@nwutils/getter": "^0.2.4",
+        "@nwutils/runner": "^0.2.3",
         "commander": "^14.0.3"
     },
     "devDependencies": {
