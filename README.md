@@ -42,7 +42,7 @@ Options:
   --arch <arch>            NW.js architecture (default: "x64")
   --downloadUrl <string>   Download URL (default: "https://dl.nwjs.io")
   --manifestUrl <string>   Manifest URL (default: "https://nwjs.io/versions.json")
-  --cacheDir <dir>         Cache directory (default: "/home/localghost/.nw-cli/cache")
+  --cacheDir <dir>         Cache directory (default: "/home/user/.nw-cli/cache")
   --cache <boolean>        Cache binaries (default: true)
   --ffmpeg <boolean>       Download community ffmpeg (default: false)
   --nativeAddon <boolean>  Download NW.js Node headers (default: false)
@@ -69,4 +69,3 @@ pollyfill();
 
 * [ ] Add react-js template
 * [ ] Package custom node test coverage action.
-* [ ] Properly deal with the types problem. This will be a major pain point for developers using TypeScript.
