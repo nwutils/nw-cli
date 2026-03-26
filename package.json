@@ -27,7 +27,7 @@
     "license": "MIT",
     "main": "./src/index.js",
     "bin": {
-        "nw": "./bin/cli.js"
+        "nw-cli": "./bin/cli.js"
     },
     "types": "types",
     "type": "module",
