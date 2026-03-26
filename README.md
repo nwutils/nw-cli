@@ -1,5 +1,7 @@
 # nw-cli
 
+[![npm](https://img.shields.io/npm/v/@nwutils/cli/latest)](https://www.npmjs.com/package/@nwutils/cli/v/latest)
+
 Command line interface for building NW.js apps
 
 ## Getting Started
