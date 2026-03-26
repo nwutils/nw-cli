@@ -18,6 +18,7 @@ describe("create command", function () {
         if (fs.existsSync(BASE_DIR)) {
             fs.rmSync(BASE_DIR, { recursive: true, force: true });
             fs.mkdirSync(BASE_DIR, { recursive: true });
+            fs.rmSync(path.resolve("src", "templates", "broken-template"), { recursive: true, force: true });
         }
     });
 
