@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.1.0](https://github.com/nwutils/nw-cli/compare/v0.0.2...v0.1.0) (2026-03-26)
+
+
+### Features
+
+* **command:** add create command ([#137](https://github.com/nwutils/nw-cli/issues/137)) ([d1837b5](https://github.com/nwutils/nw-cli/commit/d1837b535009a36c67b691e88087f91380ec2a40))
+* **command:** add dev command ([#138](https://github.com/nwutils/nw-cli/issues/138)) ([8a88027](https://github.com/nwutils/nw-cli/commit/8a88027224b6c04b09bd8879dbeaebe729fa6ea4))
+
+
+### Chores
+
+* **ci:** correct Release Please action input files ([3b09c0c](https://github.com/nwutils/nw-cli/commit/3b09c0c6123732390fa2a2197d96dbcf40d2cbfa))
+* **ci:** set npm to v11.11.1 ([f93a6b9](https://github.com/nwutils/nw-cli/commit/f93a6b917d46a9d725caf27ddefb705207eb3748))
+* **ci:** switch to OIDC ([387a8d1](https://github.com/nwutils/nw-cli/commit/387a8d1b756d491791aaaf00868af702d1377865))
+* **deps:** bump the gha group in /.github/workflows with 2 updates ([#126](https://github.com/nwutils/nw-cli/issues/126)) ([0545ff6](https://github.com/nwutils/nw-cli/commit/0545ff6b47b16d70ac68431e767756028cfc3687))
+* **deps:** bump the npm group across 1 directory with 8 updates ([#117](https://github.com/nwutils/nw-cli/issues/117)) ([cf9348a](https://github.com/nwutils/nw-cli/commit/cf9348ab3b27c18587db8a8f689b5a99aa301b8d))
+* **deps:** bump the npm group with 7 updates ([#110](https://github.com/nwutils/nw-cli/issues/110)) ([22a8067](https://github.com/nwutils/nw-cli/commit/22a8067ff12c59b1d05537d48dd842b2137f9dfb))
+* **deps:** bump the npm group with 8 updates ([#127](https://github.com/nwutils/nw-cli/issues/127)) ([c6e2ecf](https://github.com/nwutils/nw-cli/commit/c6e2ecf8205b6ae640151c213e9e52bc06499090))
+* **docs:** add banner ([243e881](https://github.com/nwutils/nw-cli/commit/243e8811dc86fc6cdc4065f26964179bb5f9ee4a))
+* **docs:** add some more instructions ([2d39a84](https://github.com/nwutils/nw-cli/commit/2d39a84faa572ebee55024e31fce0d2eae0b0ca3))
+* **docs:** update banner ([1d16889](https://github.com/nwutils/nw-cli/commit/1d168890a5a6aae0ffc90248f31c08ef7ea476e7))
+* **docs:** update usage ([acd5303](https://github.com/nwutils/nw-cli/commit/acd53039a2afaa466be0263b19c3db073d9a6e79))
+
 ## [0.0.2](https://github.com/nwutils/nw-cli/compare/v0.0.1...v0.0.2) (2025-05-01)
 
 
