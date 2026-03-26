@@ -1,2 +1,2 @@
 export { polyfill };
-import polyfill from './polyfill.js';
+import polyfill from './polyfills/index.js';

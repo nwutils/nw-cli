@@ -27,13 +27,14 @@
     "license": "MIT",
     "main": "./src/index.js",
     "bin": {
-        "nw": "./bin/cli.js"
+        "nw-cli": "./src/cli.js"
     },
-    "types": "types",
+    "types": "types/index.d.ts",
     "type": "module",
     "files": [
         "LICENSE",
-        "src"
+        "src",
+        "types"
     ],
     "homepage": "https://github.com/nwutils/nw-cli",
     "repository": {
@@ -46,8 +47,8 @@
         "test": "node --test --experimental-test-coverage --test-coverage-exclude=\"tests/**/*\" \"tests/specs/*.test.js\""
     },
     "dependencies": {
-        "@nwutils/getter": "^0.2.2",
-        "@nwutils/runner": "^0.2.1",
+        "@nwutils/getter": "^0.2.4",
+        "@nwutils/runner": "^0.2.3",
         "commander": "^14.0.3"
     },
     "devDependencies": {
@@ -59,5 +60,8 @@
         "globals": "^17.4.0",
         "typescript": "^6.0.2"
     },
-    "packageManager": "npm@11.12.0"
+    "packageManager": "npm@11.12.0",
+    "workspaces": [
+        "src/templates/*"
+    ]
 }
