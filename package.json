@@ -29,7 +29,7 @@
     "bin": {
         "nw-cli": "./bin/cli.js"
     },
-    "types": "types",
+    "types": "types/index.d.ts",
     "type": "module",
     "files": [
         "LICENSE",
