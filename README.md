@@ -5,6 +5,7 @@ Command line interface for building NW.js apps
 ## Getting Started
 
 1. Install package: `npm i -g @nwutils/cli`
+1. Create a new project: `nw-cli create MyApp`
 
 ## CLI
 
@@ -69,3 +70,15 @@ pollyfill();
 
 * [ ] Add react-js template
 * [ ] Package custom node test coverage action.
+
+## Contributing
+
+### External contributor
+
+- Use Node.js standard libraries whenever possible.
+- Prefer to use syncronous APIs over modern APIs which have been introduced in later versions.
+
+### Maintainer
+
+- npm trusted publishing is used for releases
+- a package is released when a maintainer creates a release note for a specific version
