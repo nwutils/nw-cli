@@ -5,6 +5,6 @@
         "@nwutils/cli": "^0.0.2"
     },
     "scripts": {
-        "start": "nw dev"
+        "dev": "nw dev"
     }
 }
