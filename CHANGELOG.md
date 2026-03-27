@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/nwutils/nw-cli/compare/v0.1.0...v0.1.1) (2026-03-27)
+
+
+### Bug Fixes
+
+* **ci:** correct bin path ([8263ef7](https://github.com/nwutils/nw-cli/commit/8263ef792568c3528146c8cfe0ce9c95f37e1028))
+
 ## [0.1.0](https://github.com/nwutils/nw-cli/compare/v0.0.2...v0.1.0) (2026-03-26)
 
 
